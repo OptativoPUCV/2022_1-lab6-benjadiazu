@@ -268,3 +268,9 @@ sudoku.c:48:10: error: unused variable ‘vector’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 d680e3b
+Thu May 12 16:05:13 UTC 2022: 
+ sudoku.c | 12 +++++++-----
+ 1 file changed, 7 insertions(+), 5 deletions(-)
+ tests:  2|4
+total_score: 15/70
+120b888
