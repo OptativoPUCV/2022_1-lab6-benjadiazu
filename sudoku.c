@@ -60,6 +60,7 @@ List* get_adj_nodes(Node* n){
                 for ( k = 1 ; k < 10 ; k++){
                     n->sudo[i][j] = k;
                     if (is_valid(n)){
+                        printf("k:%d\n",k);
                         Node *adj = copy(n);
                         pushBack(list,adj);
                     }
