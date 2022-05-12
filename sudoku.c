@@ -56,8 +56,7 @@ List* get_adj_nodes(Node* n){
     //MATRIZ
     for ( i = 0 ; i < 9 ; i++){
         for ( j = 0 ; j < 9 ; j++){
-            if (n->sudo[i][j] == 0){
-                printf("AAAAA\n");
+            if (n->sudo[i][j] == '\0'){
                 for ( k = 1 ; k < 10 ; k++){
                     n->sudo[i][j] = k;
                     if (is_valid(n)){
