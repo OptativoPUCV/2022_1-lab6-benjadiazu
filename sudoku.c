@@ -44,8 +44,15 @@ void print_node(Node* n){
 }
 
 int is_valid(Node* n){
-
-    return 1;
+    int i,j;
+    int *vector = (int*)calloc(sizeof(int), 9);
+  
+    for (i = 0 ; i < 9 ; i++){
+        for (j = 0 ; j < 9 ; j++){
+            
+        }
+    }
+    //return 1;
 }
 
 
@@ -55,8 +62,11 @@ List* get_adj_nodes(Node* n){
     int i,j,k;
     //MATRIZ
     for ( i = 0 ; i < 9 ; i++){
+      
         for ( j = 0 ; j < 9 ; j++){
-            if (n->sudo[i][j] == '\0'){
+          
+            if (n->sudo[i][j] == 0){
+              
                 for ( k = 1 ; k < 10 ; k++){
                     n->sudo[i][j] = k;
                     if (is_valid(n)){
@@ -64,9 +74,9 @@ List* get_adj_nodes(Node* n){
                         pushBack(list,adj);
                     }
                 }
+              n->sudo[i][j] = 0;
+              return list;
             }
-            n->sudo[i][j] = 0;
-            return list;
         }
     }
     return list;
