@@ -51,7 +51,7 @@ int is_valid(Node* n){
     for ( p = 0 ; p < 9 ; p++){
         int i=3*(k/3) + (p/3) ;
         int j=3*(k%3) + (p%3) ;
-        
+        print("AA\n");
     }
     
     return 1;
