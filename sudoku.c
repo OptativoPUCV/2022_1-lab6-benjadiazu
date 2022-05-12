@@ -44,7 +44,17 @@ void print_node(Node* n){
 }
 
 int is_valid(Node* n){
-
+    //CREAR VECTOR PARA COMPARAR
+    int *vector = (int*)calloc(sizeof(int),9);
+    int i,j;
+  
+    for ( i = 0 ; i < 9 ; i++){
+        int k = 3*(k/3) + (p/3);
+        int p = 3*(k%3) + (p%3);
+        printf("%d ",n->sudo[i][j]);
+        if(p%3 == 2) printf("\n");
+    }
+    
     return 1;
 }
 
@@ -55,11 +65,8 @@ List* get_adj_nodes(Node* n){
     int i,j,k;
     //MATRIZ
     for ( i = 0 ; i < 9 ; i++){
-      
         for ( j = 0 ; j < 9 ; j++){
-          
             if (n->sudo[i][j] == 0){
-              
                 for ( k = 1 ; k < 10 ; k++){
                     n->sudo[i][j] = k;
                     if (is_valid(n)){

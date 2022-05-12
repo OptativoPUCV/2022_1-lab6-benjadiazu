@@ -129,3 +129,18 @@ Thu May 12 15:47:16 UTC 2022:
  tests:  2|4
 total_score: 15/70
 0bb4aca
+Thu May 12 15:54:48 UTC 2022: 
+ sudoku.c | 10 ++++++++++
+ 1 file changed, 10 insertions(+)
+In file included from test.c:5:0:
+sudoku.c: In function ‘is_valid’:
+sudoku.c:52:28: error: ‘p’ undeclared (first use in this function)
+         int k = 3*(k/3) + (p/3);
+                            ^
+sudoku.c:52:28: note: each undeclared identifier is reported only once for each function it appears in
+sudoku.c:48:10: error: unused variable ‘vector’ [-Werror=unused-variable]
+     int *vector = (int*)calloc(sizeof(int),9);
+          ^~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+c8376ac
