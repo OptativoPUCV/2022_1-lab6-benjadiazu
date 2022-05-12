@@ -45,15 +45,11 @@ void print_node(Node* n){
 
 int is_valid(Node* n){
     //CREAR VECTOR PARA COMPARAR
-    //int *vector = (int*)calloc(sizeof(int),9);
-    int p;
+    int *vector = (int*)calloc(sizeof(int),9);
+    int i,j,a,b;
     int k = 4;
-    for ( p = 0 ; p < 9 ; p++){
-        for (int i = 3*(k/3) + (p/3); i < 3 ; i++){
-            for (int j = 3*(k%3) + (p%3); j < 3 ; j++){
-                
-            }
-        }
+    for ( i = 0 ; i < 9 ; i++){
+        
     }
     
     return 1;
