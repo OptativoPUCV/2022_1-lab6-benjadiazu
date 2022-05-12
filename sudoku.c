@@ -46,13 +46,13 @@ void print_node(Node* n){
 int is_valid(Node* n){
     //CREAR VECTOR PARA COMPARAR
     int *vector = (int*)calloc(sizeof(int),9);
-    int i,j;
-  
+    int i,j,a,b;
+    int k = 4;
     for ( i = 0 ; i < 9 ; i++){
-        int k = 3*(k/3) + (p/3);
-        int p = 3*(k%3) + (p%3);
+        int a = 3*(k/3) + (i/3);
+        int b = 3*(k%3) + (i%3);
         printf("%d ",n->sudo[i][j]);
-        if(p%3 == 2) printf("\n");
+        if(i%3 == 2) printf("\n");
     }
     
     return 1;

@@ -144,3 +144,29 @@ sudoku.c:48:10: error: unused variable ‘vector’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 c8376ac
+Thu May 12 15:56:04 UTC 2022: 
+ sudoku.c | 10 +++++-----
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+In file included from test.c:5:0:
+sudoku.c: In function ‘is_valid’:
+sudoku.c:53:13: error: unused variable ‘b’ [-Werror=unused-variable]
+         int b = 3*(k%3) + (i%3);
+             ^
+sudoku.c:52:13: error: unused variable ‘a’ [-Werror=unused-variable]
+         int a = 3*(k/3) + (i/3);
+             ^
+sudoku.c:49:15: error: unused variable ‘b’ [-Werror=unused-variable]
+     int i,j,a,b;
+               ^
+sudoku.c:49:13: error: unused variable ‘a’ [-Werror=unused-variable]
+     int i,j,a,b;
+             ^
+sudoku.c:48:10: error: unused variable ‘vector’ [-Werror=unused-variable]
+     int *vector = (int*)calloc(sizeof(int),9);
+          ^~~~~~
+sudoku.c:54:9: error: ‘j’ may be used uninitialized in this function [-Werror=maybe-uninitialized]
+         printf("%d ",n->sudo[i][j]);
+         ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+2ec09bc
