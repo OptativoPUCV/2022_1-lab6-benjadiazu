@@ -49,9 +49,11 @@ int is_valid(Node* n){
     int p;
     int k = 4;
     for ( p = 0 ; p < 9 ; p++){
-        int i=3*(k/3) + (p/3) ;
-        int j=3*(k%3) + (p%3) ;
-        print("AA\n");
+        for (int i = 3*(k/3) + (p/3); i < 3 ; i++){
+            for (int j = 3*(k%3) + (p%3); j < 3 ; j++){
+                
+            }
+        }
     }
     
     return 1;
