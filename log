@@ -170,3 +170,20 @@ sudoku.c:54:9: error: ‘j’ may be used uninitialized in this function [-Werro
 cc1: all warnings being treated as errors
 Compilation failed
 2ec09bc
+Thu May 12 15:57:18 UTC 2022: 
+ sudoku.c | 12 ++++++------
+ 1 file changed, 6 insertions(+), 6 deletions(-)
+In file included from test.c:5:0:
+sudoku.c: In function ‘is_valid’:
+sudoku.c:49:15: error: unused variable ‘b’ [-Werror=unused-variable]
+     int p,j,a,b;
+               ^
+sudoku.c:49:13: error: unused variable ‘a’ [-Werror=unused-variable]
+     int p,j,a,b;
+             ^
+sudoku.c:49:11: error: unused variable ‘j’ [-Werror=unused-variable]
+     int p,j,a,b;
+           ^
+cc1: all warnings being treated as errors
+Compilation failed
+4b9505d
