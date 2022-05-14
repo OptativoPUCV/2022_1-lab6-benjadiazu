@@ -48,7 +48,7 @@ int is_valid(Node* n){
     //CREAR VECTOR PARA COMPARAR
     int *vector = (int*)calloc(sizeof(int),10);
     //RECORRER FILAS
-    int posicion;
+    /*int posicion;
     for (int i = 0 ; i < 9 ; i++){
       for (int j = 0 ; j < 9 ; j++){
         posicion = n->sudo[i][j];
@@ -57,7 +57,9 @@ int is_valid(Node* n){
       }
       vector = (int*)calloc(sizeof(int),10);
     }
-
+    */ 
+    return 1;
+} 
 
 
 List* get_adj_nodes(Node* n){
