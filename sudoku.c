@@ -45,7 +45,6 @@ void print_node(Node* n){
 
 int is_valid(Node* n){
   
-   
   
     return 1;
 }
@@ -56,8 +55,8 @@ List* get_adj_nodes(Node* n){
 
     int i,j,k;
     //MATRIZ
-    for ( i = 0 ; i <=9 ; i++){
-        for ( j = 0 ; j <= 9 ; j++){
+    for ( i = 0 ; i < 9 ; i++){
+        for ( j = 0 ; j < 9 ; j++){
             if (n->sudo[i][j] == 0){
                 for ( k = 1 ; k < 10 ; k++){
                     n->sudo[i][j] = k;
