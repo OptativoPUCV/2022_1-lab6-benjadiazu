@@ -28,7 +28,6 @@ Node* read_file (char* file_name){
             printf("failed to read data!");
        }
   }
-
   fclose (file);
   return n;
 }
@@ -45,7 +44,6 @@ void print_node(Node* n){
 
 int is_valid(Node* n){
   
-  //CREAR VECTOR PARA COMPARAR
   
   //RECORRER FILAS
   for (int i = 0 ; i < 9 ; i++){
