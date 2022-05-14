@@ -51,10 +51,21 @@ int is_valid(Node* n){
     int posicion;
     for (int i = 0 ; i < 9 ; i++){
       for (int j = 0 ; j < 9 ; j++){
-          posicion = n->sudo[i][j];
-
-          vector[posicion] = 1;
+        posicion = n->sudo[i][j];
+        if (vector[posicion] == 1)return 0;
+        vector[posicion] = 1;
       }
+      vector = (int*)calloc(sizeof(int),10);
+    }
+
+    //RECORRER COLUMNAS
+    for (int j = 0 ; j < 9 ; j++){
+      for (int i = 0 ; i < 9 ; i++){
+        posicion = n->sudo[j][i];
+        if (vector[posicion] == 1)return 0;
+        vector[posicion] = 1;
+      }
+      vector = (int*)calloc(sizeof(int),10);
     }
     return 1;
 }
