@@ -56,6 +56,7 @@ int is_valid(Node* n){
                     vector[posicion] = 1;
                   }
                 else{
+                  printf("ENTRA\n");
                    return 0;
                 }
             }
