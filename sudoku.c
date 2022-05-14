@@ -46,7 +46,8 @@ void print_node(Node* n){
 int is_valid(Node* n){
   
     //CREAR VECTOR PARA COMPARAR
-    int *vector = (int*)calloc(sizeof(int),10);
+    
+    //int *vector = (int*)calloc(sizeof(int),10);
     //RECORRER FILAS
     /*int posicion;
     for (int i = 0 ; i < 9 ; i++){
