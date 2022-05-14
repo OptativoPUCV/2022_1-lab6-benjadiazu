@@ -58,29 +58,6 @@ int is_valid(Node* n){
       vector = (int*)calloc(sizeof(int),10);
     }
 
-    //RECORRER COLUMNAS
-    for (int j = 0 ; j < 9 ; j++){
-      for (int i = 0 ; i < 9 ; i++){
-        posicion = n->sudo[j][i];
-        if (vector[posicion] == 1)return 0;
-        vector[posicion] = 1;
-      }
-      vector = (int*)calloc(sizeof(int),10);
-    }
-
-    //Recorrer matrix 3x3
-    vector = (int*)calloc(sizeof(int),10);
-    int k,p; 
-    for (k = 0 ; k < 9 ; k++){
-      for(p=0;p<9;p++){
-        int i=3*(k/3) + (p/3);
-        int j=3*(k%3) + (p%3);
-        vector[posicion]= n->sudo[i][j];
-      }
-      vector = (int*)calloc(sizeof(int),10);
-    }
-    return 1;
-}
 
 
 List* get_adj_nodes(Node* n){
