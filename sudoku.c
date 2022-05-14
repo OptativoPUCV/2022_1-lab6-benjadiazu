@@ -73,11 +73,11 @@ List* get_adj_nodes(Node* n){
             if (n->sudo[i][j] == 0){
                 for ( k = 1 ; k < 10 ; k++){
                     n->sudo[i][j] = k;
-                    printf("[%d,%d]\n",i,j);
                     if (is_valid(n)){
                         Node *adj = copy(n);
                         pushBack(list,adj);
                     }
+                  printf("[%d,%d]\n",i,j);
                 }
               n->sudo[i][j] = 0;
               return list;
