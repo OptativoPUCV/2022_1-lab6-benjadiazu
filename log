@@ -498,3 +498,14 @@ sudoku.c:50:10: error: unused variable ‘vector’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 b9a42ec
+Sat May 14 22:29:20 UTC 2022: 
+ sudoku.c | 1 -
+ 1 file changed, 1 deletion(-)
+In file included from test.c:5:0:
+sudoku.c: In function ‘is_valid’:
+sudoku.c:50:10: error: unused variable ‘vector’ [-Werror=unused-variable]
+     int *vector = (int*)calloc(sizeof(int),10);
+          ^~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+7f8da77
