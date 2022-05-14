@@ -54,7 +54,7 @@ int is_valid(Node* n){
             if (vector[posicion] == 0){
                 vector[posicion] = 1;
             }
-            else {printf("Entra\n";return 0;}
+            else {printf("Entra\n");return 0;}
         }
     }
   
