@@ -133,8 +133,8 @@ Node* DFS(Node* initial, int* cont){
       push(S,aux);
       aux = next(adj);
     }
-    return NULL;
   }
+  return NULL;
 }
 
 
