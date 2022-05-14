@@ -82,6 +82,7 @@ int is_valid(Node* n){
         else{return 0;}
     }
   }
+  printf("PASA POR AQUI\n");
   return 1;
 } 
 
