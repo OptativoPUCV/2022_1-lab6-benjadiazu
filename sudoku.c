@@ -47,18 +47,21 @@ int is_valid(Node* n){
   
     //CREAR VECTOR PARA COMPARAR
     
-    //int *vector = (int*)calloc(sizeof(int),10);
+    int *vector = (int*)calloc(sizeof(int),10);
     //RECORRER FILAS
-    /*int posicion;
+    int posicion;
     for (int i = 0 ; i < 9 ; i++){
       for (int j = 0 ; j < 9 ; j++){
         posicion = n->sudo[i][j];
-        if (vector[posicion] == 1)return 0;
-        vector[posicion] = 1;
+        if (vector[posicion] == 0){
+            vector[posicion] = 1;
+        }
+        else{
+            return 0;
+        }
       }
       vector = (int*)calloc(sizeof(int),10);
     }
-    */ 
     return 1;
 } 
 
