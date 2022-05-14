@@ -51,9 +51,12 @@ int is_valid(Node* n){
     for (int i = 0 ; i < 9 ; i++){
         for (int j = 0 ; j < 9 ; j++){
             int posicion = n->sudo[i][j];
-            if (vector[posicion] == 0){
+            if (posicion != 0 && vector[posicion] == 0){
                 vector[posicion] = 1;
               }
+            else{
+               return 0;
+            }
         }
     }
     return 1;
