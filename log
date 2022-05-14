@@ -280,3 +280,14 @@ Thu May 12 16:11:38 UTC 2022:
  tests:  2|4
 total_score: 15/70
 78e4f8d
+Sat May 14 18:50:29 UTC 2022: 
+ sudoku.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:5:0:
+sudoku.c: In function ‘is_valid’:
+sudoku.c:49:10: error: unused variable ‘vector’ [-Werror=unused-variable]
+     int *vector = (int*)calloc(sizeof(int),10);
+          ^~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+d74571d
