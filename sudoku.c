@@ -123,7 +123,7 @@ Node* DFS(Node* initial, int* cont){
   Stack *S = createStack();
   push(S,initial);
 
-  while (S != 0){
+  while (S){
     Node *nodo = top(S);
     pop(S);
     if (is_final(nodo))return nodo;
