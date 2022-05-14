@@ -51,7 +51,7 @@ int is_valid(Node* n){
   for (int i = 0 ; i < 9 ; i++){
     int vector[10] = {0};
     for (int j = 0 ; j < 9 ; j++){
-        if(vector[n->sudo[i][j]] == 0 && n->sudo[i][j]){
+        if(vector[n->sudo[i][j]] == 0 && n->sudo[i][j] != 0){
             vector[n->sudo[i][j]] = 1;
         }
         else{return 0;}
@@ -62,7 +62,7 @@ int is_valid(Node* n){
   for (int j = 0 ; j < 9 ; j++){
     int vector[10] = {0};
     for (int i = 0 ; i < 9 ; i++){
-        if(vector[n->sudo[i][j]] == 0 && n->sudo[i][j]){
+        if(vector[n->sudo[i][j]] == 0 && n->sudo[i][j] != 0){
             vector[n->sudo[i][j]] = 1;
         }
         else{return 0;}
@@ -78,7 +78,7 @@ int is_valid(Node* n){
     for(p=0;p<9;p++){
         int i=3*(k/3) + (p/3) ;
         int j=3*(k%3) + (p%3) ;
-        if(vector[n->sudo[i][j]] == 0 && n->sudo[i][j]){
+        if(vector[n->sudo[i][j]] == 0 && n->sudo[i][j] != 0){
           vector[n->sudo[i][j]] = 1;
         }
         else{return 0;}
