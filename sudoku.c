@@ -45,24 +45,46 @@ void print_node(Node* n){
 
 int is_valid(Node* n){
   
-    //CREAR VECTOR PARA COMPARAR
-    
-    int *vector = (int*)calloc(sizeof(int),10);
-    //RECORRER FILAS
-    int posicion;
-    for (int i = 0 ; i < 9 ; i++){
-      for (int j = 0 ; j < 9 ; j++){
-        posicion = n->sudo[i][j];
-        if (vector[posicion] == 0){
-            vector[posicion] = 1;
+  //CREAR VECTOR PARA COMPARAR
+  
+  //RECORRER FILAS
+  for (int i = 0 ; i < 9 ; i++){
+    int vector[10] = {0};
+    for (int j = 0 ; j < 9 ; j++){
+        if(vector[n->sudo[i][j]] == 0 && n->sudo[i][j]){
+            vector[n->sudo[i][j]] = 1;
         }
-        else{
-            return 0;
-        }
-      }
-      vector = (int*)calloc(sizeof(int),10);
+        else{return 0;}
     }
-    return 1;
+  }
+
+  //RECORRER COLUMNAS
+  for (int j = 0 ; j < 9 ; j++){
+    int vector[10] = {0};
+    for (int i = 0 ; i < 9 ; i++){
+        if(vector[n->sudo[i][j]] == 0 && n->sudo[i][j]){
+            vector[n->sudo[i][j]] = 1;
+        }
+        else{return 0;}
+    }
+  }
+
+  //RECORRER Matriz 3x3
+
+  for (int m = 0 ; m < 9 ; m++){
+    int k = m;
+    int p;
+    int vector[10] = {0};
+    for(p=0;p<9;p++){
+        int i=3*(k/3) + (p/3) ;
+        int j=3*(k%3) + (p%3) ;
+        if(vector[n->sudo[i][j]] == 0 && n->sudo[i][j]){
+          vector[n->sudo[i][j]] = 1;
+        }
+        else{return 0;}
+    }
+  }
+  return 1;
 } 
 
 
