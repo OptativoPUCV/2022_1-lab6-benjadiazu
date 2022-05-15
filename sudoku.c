@@ -129,16 +129,14 @@ Node* DFS(Node* initial, int* cont){
     if (is_final(nodo))return nodo;
     List * adj = get_adj_nodes(nodo);
     Node* aux = first(adj);
+    (*cont)++;
     while (aux){
       push(S,aux);
       aux = next(adj);
-      cont++;
     }
   }
   return NULL;
 }
-
-
 
 /*
 int main( int argc, char *argv[] ){
@@ -151,4 +149,5 @@ int main( int argc, char *argv[] ){
   print_node(final);
 
   return 0;
-}*/
+}
+*/
